@@ -10,9 +10,9 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
   subtitle = "Semi-retired computer scientist. Prepping for the killer app."
-  logo = "img/al-poster-edges-bw.png"
+  logo = "img/al-poster-edges-color.png"
   dateFormat = "January 2, 2006"
-  readingTime = true
+  readingTime = false
 
 [Author]
   name = "Allen McPherson"
