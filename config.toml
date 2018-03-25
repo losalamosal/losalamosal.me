@@ -8,3 +8,12 @@ theme = "beautifulhugo"
   logo = "img/al-poster-edges-bw.png"
   dateFormat = "January 2, 2006"
   readingTime = true
+
+[Author]
+  name = "Allen McPherson"
+  website = "losalamosal.me"
+  email = "al@losalamosal.me"
+  github = "losalamosal"
+  twitter = "losalamosal"
+  linkedin = "allenmcpherson"
+  stackoverflow = "users/227441/los-alamos-al"
