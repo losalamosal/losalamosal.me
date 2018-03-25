@@ -2,3 +2,9 @@ baseURL = "https://losalamosal.me"
 languageCode = "en-us"
 title = "Los Alamos Al"
 theme = "beautifulhugo"
+
+[Params]
+  subtitle = "Semi-retired computer scientist. Prepping for the killer app."
+  logo = "img/al-poster-edges-bw.png"
+  dateFormat = "January 2, 2006"
+  readingTime = true
