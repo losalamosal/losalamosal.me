@@ -1,0 +1,4 @@
+baseURL = "https://losalamosal.me"
+languageCode = "en-us"
+title = "Los Alamos Al"
+theme = "beautifulhugo"
