@@ -1,4 +1,4 @@
-baseURL = "https://losalamosal.me"
+baseURL = "http://losalamosal.me"
 languageCode = "en-us"
 title = "Los Alamos Al"
 theme = "beautifulhugo"
