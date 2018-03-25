@@ -1,7 +1,8 @@
-baseURL = "/"
+baseURL = "http://losalamosal.me/"
 languageCode = "en-us"
 title = "Los Alamos Al"
 theme = "beautifulhugo"
+buildDrafts = true
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
