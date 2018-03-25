@@ -7,6 +7,8 @@ Create repo on GitHub first.
 # clone as follows with SSH for multiple GitHub accounts
 > git clone git@losalamosal.github.com/losalamosal/losalamosal.me.git
 > cd losalamosal.me
+# Set email for SSH user
+> git config user.email account-appropriate@email
 # make new site in existing (non-empty) directory
 > hugo new site --force .
 > cd themes
