@@ -2,16 +2,24 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Los Alamos Al"
 theme = "beautifulhugo"
-buildDrafts = true
+# buildDrafts = true
 metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-pygmentsUseClasses = true
+# pygmentsStyle = "manni"
+pygmentsStyle = "murphy"
+# pygmentsStyle = "pastie"
+# pygmentsStyle = "colorful"
+# pygmentsStyle = "autumn"
+# pygmentsStyle = "monokai"
+# pygmentsStyle = "emacs"
+# pygmentsStyle = "friendly"
+# pygmentsStyle = "native"
+pygmentsUseClasses = false
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [Params]
   subtitle = "Semi-retired computer scientist. Prepping for the killer app."
-  logo = "img/al-poster-edges-color.png"
+  logo = "img/slim1.jpg"
   dateFormat = "January 2, 2006"
   readingTime = false
 
