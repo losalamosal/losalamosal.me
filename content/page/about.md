@@ -1,16 +1,20 @@
 ---
 title: About Al
-subtitle: What's a killer app and why am I prepping for it?
+subtitle: "Gone, but not forgetting"
 comments: false
 ---
 
-My name is Allen McPherson. I work part-time at Los Alamos National Laboratory.
+Allen 'Al' McPherson is a semi-retired computer scientist living in Los Alamos,
+New Mexico. Prior to his retirement, Al spent eleven years (1979--1990) at the
+Boeing Company in Seattle and 25 years (1990-2015) at Los Alamos National
+Laboratory where he is currently employed as a part-time advisor. He spends the
+remainder of his free time traveling, watching Cubs games, painting, and
+[preparing for the Killer App]({{< relref "yes-im-a-prepper.md" >}}).
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Al holds a BA in Computer Science (Southern Illinois University, 1979) and an
+MS in Computer Science (University of New Mexico, 1995). You can read more
+about his professional career at
+[LinkedIn](https://linkedin.com/in/allenmcpherson).
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+To contact Al, ping him on [Twitter](https://twitter.com/LosAlamosAl) at
+@LosAlamosAl or send him an [email]().

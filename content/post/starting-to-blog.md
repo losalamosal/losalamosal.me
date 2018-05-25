@@ -1,28 +1,29 @@
 ---
 title: "Starting to Blog"
 subtitle: "Working with Hugo and Netlify"
-date: 2018-03-24T18:12:42-06:00
+date: 2018-04-04
 tags: ["hugo", "netlify"]
 draft: true
 ---
 
 After many years of procrastination I've decided to start blogging. Retiring
-from Los Alamos (partially anyway) has removed the last excuse not to
-blog. Partial retirement generates a lot of spare time. I have some hobbies (Go
-Cubs!), and I like to travel with my beautiful wife, but I know that I need to
-exercise what's left of the old gray matter. Somewhat surprisingly, after a
-37-year career, I find that I still like to hack code.
+from Los Alamos has removed the last excuse not to blog. Even partial
+retirement generates a lot of spare time. I have some hobbies (Go Cubs!), and I
+like to travel with my beautiful wife, but I still feel a need to exercise
+what's left of the old gray matter. Somewhat surprisingly, after a 37-year
+career as a computer scientist, I find that I still like to hack code.
 
 <!--more-->
 
-My overall goal is to prepare myself technically should I ever come up with an
-idea for **The Killer App**. My current skills and software stack expertise
-(C/C++, OpenGL, MPI, etc.) won't do me much good when it comes time to build
-this app for today's cloud-based environment. Of course, my computer science
-training and experience are still useful, but I need to learn an entirely new
-stack to work in this area. This is what I call "prepping for the killer app"
-(_#KillerAppPrepper_, _#KAPrepper_) which I'll document in a
-future post. For now though, I need to get started with a simple blog.
+The main purpose of this blog is to document how I prepare myself technically
+should I ever come up with an idea for **The Killer App**. My current skills
+and software stack expertise (C/C++, OpenGL, MPI, etc.) won't do me much good
+when it comes time to build applications for today's cloud-based environment. Of
+course, my computer science training and experience are still useful, but I
+need to learn an entirely new stack to work in this area. This is what I call
+"prepping for the killer app" (_#KillerAppPrepper_, _#KAPrepper_) which I'll
+document in a future post. For now though, I need to get started with a simple
+blog.
 
 ## Going with JAMstack
 
@@ -79,9 +80,9 @@ is perfectly serviceable for now. If you're on GitHub ([as I
 am](https://github.com/losalamosal/losalamosal.me)), be sure to add the theme as
 a [submodule](https://blog.github.com/2016-02-01-working-with-submodules/) (as
 shown above). This will allow you to pull a new version of the theme when it's
-updated and integrate more easily with your host.
+updated and integrate more easily with your hosting provider.
 
-Edit `config.toml` and make the following changes.
+Now edit `config.toml` and make the following changes.
 
 ```toml
 baseURL = "/"
