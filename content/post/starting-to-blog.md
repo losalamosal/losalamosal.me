@@ -2,38 +2,83 @@
 title: "Starting to Blog"
 subtitle: "Working with Hugo and Netlify"
 date: 2018-04-04
+lastmod: 2018-06-19
 tags: ["hugo", "netlify"]
 draft: true
 ---
 
-After many years of procrastination I've decided to start blogging. Retiring
-from Los Alamos has removed the last excuse not to blog. Even partial
-retirement generates a lot of spare time. I have some hobbies (Go Cubs!), and I
-like to travel with my beautiful wife, but I still feel a need to exercise
-what's left of the old gray matter. Somewhat surprisingly, after a 37-year
-career as a computer scientist, I find that I still like to hack code.
+Now that I've retired from Los Alamos (partially anyway), and I have a bit of
+free time, I've decided to start blogging. I'm not writing to bare my soul or
+discuss my political views &mdash; that's just navel gazing. No, my motivation
+for blogging comes from a much deeper place. I want to build a side project
+&mdash; **The Killer App**&trade; &mdash; and make a ton of money!
+Unfortunately, as of now, I have no idea what this killer app might be. This
+blog's focus is on documenting my *technical preparation*, so that when the
+idea for the killer app does materialize, I can build and deploy it as fast as
+possible. I'll talk more about potential killer apps and the technologies
+required to build them in future posts. For now though, I need to stand up a
+blog.
 
 <!--more-->
 
-The main purpose of this blog is to document how I prepare myself technically
-should I ever come up with an idea for **The Killer App**. My current skills
-and software stack expertise (C/C++, OpenGL, MPI, etc.) won't do me much good
-when it comes time to build applications for today's cloud-based environment. Of
-course, my computer science training and experience are still useful, but I
-need to learn an entirely new stack to work in this area. This is what I call
-"prepping for the killer app" (_#KillerAppPrepper_, _#KAPrepper_) which I'll
-document in a future post. For now though, I need to get started with a simple
-blog.
+## Leverage the JAMstack
 
-## Going with JAMstack
+There are may ways to publish a blog. You could use a hosted (by someone other
+than you) blogging platform like [Medium](https://medium.com/) or
+[Blogger](https://www.blogger.com). These solutions are usually free and
+provide a low barrier of entry. Set up an account, enter your content with a
+beautiful user interface, pick a theme, and publish to the web. Some possible
+downsides include limited control of all aspects of your site, potential
+inability to use a custom domain (e.g. `www.mydomain.com`), and the fact that
+your content resides on their servers.
+
+Another option is self-hosted solutions, such as the venerable
+[WordPress](https://wordpress.org/) platform (WordPress also offers a [hosted
+solution](https://wordpress.com)). Self-hosted solutions require a bit more
+work on the part of the potential blogger. For example, hosting
+(e.g. [Dreamhost](https://www.dreamhost.com)) must be procured, a database and
+WordPress must be installed, a domain name needs to be purchased and made to
+point at your site, an acceptable theme configured (lot of great themes at
+[Theme Forrest](https://themeforrest.net)), etc. Hosting companies often
+provide canned procedures and scripts to simplify many of these configuration
+tasks. The upside of this approach is that you have much more influence
+on your end results and total control of your own content.
+
+Yet another option, and the one that appeals the most to me, is to use a
+[static site generator](https://www.staticgen.com). Before I talk about why I
+find this approach appealing we need to define what it is. Let's do that in two
+parts: **static** and **generator**.
+
+On a *static site*, the content of the pages is fixed and all users see the
+same thing when visiting a page. These pages are written with HTML (and CSS for
+styling) and don't use a *back end* server to populate the page with
+content. Dynamic sites essentially have *holes* in the pages that are *filled
+in* dynamically by executing a process (and potentially querying a database) on
+a remote server. Benefits of static sites include performance (the site is
+pre-build and doesn't need to be constructed in real time), reliability (there
+is no dependence on back end systems), and security (the lack of back end
+servers, processes and databases reduces the *attack surface*).
+
+Static sites are easily built by hand. Code up some HTML/CSS pages, place them
+in a directory that a web server can access, and voil&agrave;: you've got a static
+site. Of course, for anything but the most basic site, building by hand is a
+drag. This is where static site *generators* come in. Static sites can also
+have *holes* for content (e.g. posts). Unlike dynamic sites, these holes are
+filled in at *compile time* by the static site generator.  
+
+Static
+[sites](https://medium.com/@borisschapira/back-to-static-a-paradigm-shift-for-better-ux-and-web-performance-56f4199d74ff),
+especially for blogs, are all the rage.
+
+
+As an old guy, with a limited event
+horizon, I'm all about leveraging. goes in to creating and publishing a blog should be at least
+partially useful down the road when building the killer app.
 
 I'm a command line guy and am comfortable editing text files. I don't need or
 want a content management system with a pretty user interface to create and
 store my content.
 
-Static
-[sites](https://medium.com/@borisschapira/back-to-static-a-paradigm-shift-for-better-ux-and-web-performance-56f4199d74ff),
-especially for blogs, are all the rage.
 
 Compile your site. All pages are *pre-rendered* during the compilation
 process. That's what makes the site *static*. Your files are the copied to a
