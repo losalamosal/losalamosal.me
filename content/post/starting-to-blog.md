@@ -3,7 +3,7 @@ title: "Starting to Blog"
 subtitle: "Working with Hugo and Netlify"
 date: 2018-04-04
 lastmod: 2018-06-19
-tags: ["hugo", "netlify"]
+tags: ["hugo", "netlify", "static-site"]
 draft: true
 ---
 
@@ -60,11 +60,11 @@ is no dependence on back end systems), and security (the lack of back end
 servers, processes and databases reduces the *attack surface*).
 
 Static sites are easily built by hand. Code up some HTML/CSS pages, place them
-in a directory that a web server can access, and voil&agrave;: you've got a static
-site. Of course, for anything but the most basic site, building by hand is a
-drag. This is where static site *generators* come in. Static sites can also
-have *holes* for content (e.g. posts). Unlike dynamic sites, these holes are
-filled in at *compile time* by the static site generator.  
+in a directory that a web server can access, and voil&agrave;: you've got a
+static site. Of course, for anything but the most basic site, building by hand
+is a drag. This is where static site *generators* come in. Static sites can
+also have *holes* for content (e.g. posts). Unlike dynamic sites, these holes
+are filled in at *compile time* by the static site generator.
 
 Static
 [sites](https://medium.com/@borisschapira/back-to-static-a-paradigm-shift-for-better-ux-and-web-performance-56f4199d74ff),
