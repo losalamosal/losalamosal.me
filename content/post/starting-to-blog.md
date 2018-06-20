@@ -1,9 +1,9 @@
 ---
 title: "Starting to Blog"
-subtitle: "Working with Hugo and Netlify"
+subtitle: "Static Site Generators for the Win"
 date: 2018-04-04
 lastmod: 2018-06-19
-tags: ["hugo", "netlify", "static-site"]
+tags: ["hugo", "netlify", "static-site", "jamstack"]
 draft: true
 ---
 
@@ -20,8 +20,6 @@ required to build them in future posts. For now though, I need to stand up a
 blog.
 
 <!--more-->
-
-## Leverage the JAMstack
 
 There are may ways to publish a blog. You could use a hosted (by someone other
 than you) blogging platform like [Medium](https://medium.com/) or
@@ -44,10 +42,11 @@ provide canned procedures and scripts to simplify many of these configuration
 tasks. The upside of this approach is that you have much more influence
 on your end results and total control of your own content.
 
-Yet another option, and the one that appeals the most to me, is to use a
-[static site generator](https://www.staticgen.com). Before I talk about why I
-find this approach appealing we need to define what it is. Let's do that in two
-parts: **static** and **generator**.
+## Static Site Generators
+
+Yet another option, and the one that appeals the most to me, is to use a static
+site generator. Before I talk about why I find this approach appealing we need
+to define what it is. Let's do that in two parts: **static** and **generator**.
 
 On a *static site*, the content of the pages is fixed and all users see the
 same thing when visiting a page. These pages are written with HTML (and CSS for
@@ -64,95 +63,71 @@ in a directory that a web server can access, and voil&agrave;: you've got a
 static site. Of course, for anything but the most basic site, building by hand
 is a drag. This is where static site *generators* come in. Static sites can
 also have *holes* for content (e.g. posts). Unlike dynamic sites, these holes
-are filled in at *compile time* by the static site generator.
+are filled in by the static site generator.
 
-Static
-[sites](https://medium.com/@borisschapira/back-to-static-a-paradigm-shift-for-better-ux-and-web-performance-56f4199d74ff),
-especially for blogs, are all the rage.
+I like the static site generator approach to blogging because it fits into my
+comfort zone as a developer. Even though I spent many years designing and
+developing user interfaces (back in the day), I don't much like using them if I
+can avoid it. I'm much more comfortable in an editor (emacs), a shell (ZSH),
+and git. This environment is right in the wheelhouse of site generators, which
+are essentially compilers. The site's *source code* (on GitHub of course)
+consists of templates that represent the structure of the site (pages, etc.), a
+theme that describes the look and, to some extent, the feel of the site, and
+the content itself (posts, etc.). You run the generator to compile all of this
+into the HTML files that represent your site.
 
+### Choosing a Static Site Generator
 
-As an old guy, with a limited event
-horizon, I'm all about leveraging. goes in to creating and publishing a blog should be at least
-partially useful down the road when building the killer app.
+There are [a lot](https://www.staticgen.com/) of static generators to choose
+from. I restricted my search to three of the more popular ones:
 
-I'm a command line guy and am comfortable editing text files. I don't need or
-want a content management system with a pretty user interface to create and
-store my content.
+* [Jekyll](https://jekyllrb.com/) is a well established, Ruby-based, static
+site generator. It has lots of themes and a large community. Unfortunately, I
+have a completely irrational, and unjustifiable, aversion to installing and
+using Ruby. Also, it's known to be a bit slow on sites with a very large number
+of posts.
+* [Gatsby](https://www.gatsbyjs.org/) is the new hotness and it
+seems like all the cool kids are using. It looks awesome, but might be a bridge
+too far for me with all of the new technology it uses (e.g. React, GraphQL,
+etc.). I may decide to give it another look someday.
+* [Hugo](https://gohugo.io/) is a static site generator written in Go. It's
+simple, fast, and is growing a large community around it.
 
+I've chosen Hugo mostly because of its speed and simplicity. To get started all
+I had to do was install a single Go binary on my Mac (via Homebrew). The Hugo
+documentation is also excellent and made getting started painless. You can examine the source code for this site at my GitHub [repository](https://github.com/losalamosal/losalamosal.me).
 
-Compile your site. All pages are *pre-rendered* during the compilation
-process. That's what makes the site *static*. Your files are the copied to a
-host that serves them up directly with no processing (e.g. PHP, database
-lookups, template handling, etc.) on the back end. This makes the site
-fast---no work on the baqck end to build your pages. Static sites can also be
-safer---there
-are no databases or back end languages to hack into. 
+## Beyond Static: JAMstack
 
-What if you do need some interactivity and processing on your site? That's
-where JAMstack comes in.
+As an old guy, with a limited event horizon, I'm all about leveraging. So, when
+choosing a technical solution or approach to a particular problem, I try to
+keep one eye the prize &mdash; **The Killer App**&trade;. Could static site
+technology be useful as the basis for a possible killer app? On the face of it,
+no. Even the simplest app would likely need some dynamic behavior. An app might
+need to authenticate users, take payments (for sure!), accept data from forms,
+store information in a database, etc. I just got through telling you that
+static sites don't do any of this. That's where the JAMstack comes in.
 
-Want to do a static site. There are [a lot](https://www.staticgen.com/) of
-static generators. I want a [JAMstack](https://jamstack.org/) site. Totally
-rubbery Goldilocks approach to technology selection but I've learned not to
-engage in too much analysis paralysis---pick something and go.
+[JAMstack](https://jamstack.org) is an extension to static sites that adds
+dynamic functionality in a fundamentally different manner than traditional
+backend-based approaches. The &lsquo;**M**&rsquo; in JAMstack represents the
+markup, or template, of the site that is filled in by the static site
+generator's compilation process. Dynamic behavior is provided by client-side
+&lsquo;**J**&rsquo;avascript interacting with external services through
+abstract &lsquo;**A**&rsquo;PIs. I'm looking forward to integrating JAMstack
+into this blog and developing prototypes of future apps. More on that in future
+posts.
 
-* **Too Cold**: [Jekyll](https://jekyllrb.com/) is a well established, Ruby-based, static site generator. It has lots of themes and a large community. I have a completely irrational, and unjustifiable, aversion to installing Ruby on my Mac. Also, it's known to be a bit slow if I ever get to a large number of posts.
-* **Too Hot**: [Gatsby](https://www.gatsbyjs.org/) is the new hotness and it seems like all the cool kids are using. It looks awesome, but might be a bridge too fare for me with all the new technology (e.g. React, GraphQL, etc.). Maybe someday.
-* **Just Right**: [Hugo](https://gohugo.io/) is a static site generator written in Go. All I have to install on my machine is the Go binary. Hugo is fast and basic, which seems like a perfect middle ground to start on.
-
-## Setting up Hugo
-
-Installing Hugo and setting up the initial site was pretty easy. I'll run through the steps I used but your best reference is the Hugo [documentation](https://gohugo.io/getting-started/). I will point out a few things I learned that either weren't in the Hugo documentation or that I found confusing.
-
-I'm on a Mac, so I install Hugo using [homebrew](https://brew.sh/).
-
-```sh
-> brew install hugo
-```
-
-With Hugo installed we can start to create and populate the new site.
-
-```sh
-> hugo new site losalamosal.me    # this will be your GitHub repo name
-> cd losalamosal.me
-> git init                        # add your repo to GitHub in the usual way
-> git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
-```
-
-I'm using the [Beautiful Hugo](https://github.com/halogenica/beautifulhugo)
-theme. Eventually, I may try and develop my own "branded" theme, but this theme
-is perfectly serviceable for now. If you're on GitHub ([as I
-am](https://github.com/losalamosal/losalamosal.me)), be sure to add the theme as
-a [submodule](https://blog.github.com/2016-02-01-working-with-submodules/) (as
-shown above). This will allow you to pull a new version of the theme when it's
-updated and integrate more easily with your hosting provider.
-
-Now edit `config.toml` and make the following changes.
-
-```toml
-baseURL = "/"
-languageCode = "en-us"
-title = "Los Alamos Al"
-theme = "beautifulhugo"
-```
-
-In particular, note that `baseURL` is set to `/`. I've experimented quite a bit with this particular setting and still don't totally understand it.
-
-To add a new post.
-
-```sh
-> hugo new post/starting-to-blog  # not 'posts' as shown in Hugo docs
-```
-
-## Hosting on Netlify
+## Choosing a Hosting Provider
 
 As with the site generators themselves, there are many options for hosting static sites. In this case, I've decided to take on a little extra learning in the hopes of better supporting the killer app.
 
-* **Too Cold**: [Dreamhost](https://www.dreamhost.com/) has been my hosting service and domain registrar for many years. I've always been happy with their service and could easily host my site there. But, it's just old to me and I want to try someting new.
-* **Just Right**: [GitHub Pages](https://pages.github.com/) would probably be the smart choice at this point in time. It's well supported by Hugo, free, and tightly bound to the source repo for the site. But, the new hotness beckons.
-* **Hot, Hot, Hot**: [Netlify](https://www.netlify.com/) is a relatively new service dedicated to hosting static sites. In addition to static sites, they recently announced support for the 'JA' portion of JAMstack by providing native support for AWS Lambda functions, user authentication, and form handling (and lots of other [cool stuff](https://www.netlify.com/features/)). This fits well with the type of killer app I have in mind and I think a little extra up front learning will pay off in the future. Besides, it's **hot**!
+* [Dreamhost](https://www.dreamhost.com/) has been my hosting service and domain registrar for many years. I've always been happy with their service and could easily host my site there. But, it's just old to me and I want to try someting new.
+* [GitHub Pages](https://pages.github.com/) would probably be the smart choice at this point in time. It's well supported by Hugo, free, and tightly bound to the source repo for the site. But, the new hotness beckons.
+* [Netlify](https://www.netlify.com/) is a relatively new service dedicated to hosting static sites. In addition to static sites, they recently announced support for the 'JA' portion of JAMstack by providing native support for AWS Lambda functions, user authentication, and form handling (and lots of other [cool stuff](https://www.netlify.com/features/)). This fits well with the type of killer app I have in mind and I think a little extra up front learning will pay off in the future. Besides, it's **hot**!
 
-## Saved for Later...
+
+## Lots of TODOs
 
 Many things not addressed in the first site that will like eventually need to be done (especially if anyone starts reading the blog).
 
@@ -166,3 +141,6 @@ using one of these hash tags to refer to this post: *#KillerAppPrepper000* or
 *#KAPrepper000*. Sprinkle in one of these tags on ant tweet unrelated to a
 specific post: *#KillerAppPrepper* or *#KAPrepper*.
 
+I'd really like to hear your feedback. Please add your comments on [the
+tweet](https://twitter.com/LosAlamosAl/status/979817365058670593) announcing
+this post.
