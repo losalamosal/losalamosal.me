@@ -161,5 +161,5 @@ Twitter might be the best place for comments on my posts. Even if it gets ugly,
 the comments are not attached to the blog.
 
 I'd really like to hear your feedback. Please add your comments to [my
-tweet](https://twitter.com/LosAlamosAl/status/979817365058670593) that
+tweet](https://twitter.com/LosAlamosAl/status/1009663862193336320) that
 announced this post.
