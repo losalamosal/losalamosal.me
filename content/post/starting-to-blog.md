@@ -124,8 +124,8 @@ developing JAMstack prototypes of future apps. More on that in future posts.
 
 ## Choosing a Hosting Provider
 
-Like all web sites, a static or JAMstack site must be be hosted
-somewhere if you want other to be able to access it. As with the site generators
+Like all web sites, a static or JAMstack, site must be be hosted
+somewhere if you want others to be able to access it. As with the site generators
 themselves, there are many options for hosting static sites. I'll highlight a few that I've used or investigated:
 
 * [Dreamhost](https://www.dreamhost.com/) has been my hosting service and domain registrar for many years. I've always been happy with their service and could easily host my site there. But, it's just old to me and I want to try someting new.
@@ -134,7 +134,7 @@ themselves, there are many options for hosting static sites. I'll highlight a fe
 
 ## TODO
 
-So, there you have it. My first post on my new blog, stored on GitHub, built
+So, there you have it: the first post on my new blog. It's stored on GitHub, built
 with Hugo, and deployed on Netlify. It's a start, but there are a few things
 missing that might be useful on a blog:
 
