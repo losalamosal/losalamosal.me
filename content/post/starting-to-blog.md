@@ -6,7 +6,7 @@ lastmod: 2018-06-20
 tags: ["hugo", "netlify", "static-site", "jamstack"]
 ---
 
-Now that I've retired from Los Alamos (partially anyway), and I have a bit of
+Now that I've retired from Los Alamos (partially anyway) and I have a bit of
 free time, I've decided to start blogging. I'm not writing to bare my soul or
 discuss my political views &mdash; that's just navel gazing. No, my motivation
 for blogging comes from a much deeper place. I want to build a side project
@@ -21,7 +21,7 @@ possible. I'll talk more about potential killer apps and the technologies
 required to build them in future posts. For now though, I need to stand up a
 blog.
 
-There are may ways to publish a blog. You could use a fully hosted blogging
+There are many ways to publish a blog. You could use a fully hosted blogging
 platform like [Medium](https://medium.com/) or
 [Blogger](https://www.blogger.com). These solutions are usually free and
 provide a low barrier of entry. Set up an account, enter your content with a
@@ -40,22 +40,21 @@ point at your site, an acceptable theme configured (lot of great themes at
 [Theme Forrest](https://themeforrest.net)), etc. Hosting companies often
 provide canned procedures and scripts to simplify many of these configuration
 tasks. The upside of this approach is that you have much more influence
-on your end results and total control of your own content. The down side is
+on your end results and total control of your own content. The downside is
 that you must manage the infrastructure yourself.
 
 ## Static Site Generators
 
 Yet another option, and the one that appeals the most to me, is to use a static
-site generator. Before I talk about why I find this approach appealing we need
+site generator. Before I talk about why I find this approach appealing, we need
 to define what it is. Let's do that in two parts: **static** and **generator**.
 
 On a *static site*, the content of the pages is fixed and all users see the
-same thing when visiting a page. These pages are written with HTML (and CSS for
-styling) and don't use a *back end* server to populate the page with
+same thing when visiting a page. These pages are written with HTML (and styled with CSS) and don't use a *back end* server to populate the page with
 content. Dynamic sites essentially have *holes* in the pages that are *filled
 in* dynamically by executing a process (and potentially querying a database) on
 a remote server. Benefits of static sites include performance (the site is
-pre-build and doesn't need to be constructed in real time), reliability (there
+pre-built and doesn't need to be constructed in real time), reliability (there
 is no dependence on back end systems), and security (the lack of back end
 servers, processes, and databases reduces the *attack surface*).
 
@@ -64,7 +63,7 @@ in a directory that a web server can access, and voil&agrave;: you've got a
 static site. Of course, for anything but the most basic site, building by hand
 is a drag. This is where static site *generators* come in. Static sites can
 also have *holes* for content (e.g. posts). Like dynamic sites, these holes are
-filled in by the static site generator. This happens when the site is *built* not
+filled in by the static site generator. This happens when the site is *built*, not
 when it's accessed by a visitor.
 
 I like the static site generator approach to blogging because it fits into my
@@ -74,7 +73,7 @@ can avoid it. I'm much more comfortable in an editor (emacs), a shell (ZSH),
 and git. This environment is right in the wheelhouse of site generators, which
 are essentially compilers. The site's *source code* (on GitHub of course)
 consists of templates that represent the structure of the site (pages, etc.), a
-theme that describes the look and, to some extent, the feel of the site, and
+theme that describes the look (and, to some extent, the feel) of the site, and
 the content itself (posts, etc.). You run the generator to *compile* all of this
 into the HTML files that represent your site.
 
@@ -83,12 +82,12 @@ into the HTML files that represent your site.
 There are [a lot](https://www.staticgen.com/) of static generators to choose
 from. I restricted my search to three of the more popular ones:
 
-* [Jekyll](https://jekyllrb.com/) is a well established, Ruby-based, static
+* [Jekyll](https://jekyllrb.com/) is a well-established, Ruby-based, static
 site generator. It has lots of themes and a large community. Unfortunately, I
-have a completely irrational, and unjustifiable, aversion to installing and
+have a completely irrational and unjustifiable aversion to installing and
 using Ruby. Also, it's known to be a bit slow on sites with a very large number
 of posts.
-* [Gatsby](https://www.gatsbyjs.org/) is the new hotness and it
+* [Gatsby](https://www.gatsbyjs.org/) is the new hotness, and it
 seems like all the cool kids are using it. It looks awesome, but might be a bridge
 too far for me with all of the new technology it uses (e.g. React, GraphQL,
 etc.). I may decide to give it another look someday.
@@ -101,7 +100,7 @@ documentation is also excellent and made getting started painless. You can exami
 
 ## Beyond Static: JAMstack
 
-As an old guy, with a limited event horizon, I'm all about leveraging. So, when
+As an old guy with a limited event horizon, I'm all about leveraging. So, when
 choosing a technical solution or approach to a particular problem, I try to
 keep one eye the prize &mdash; **The Killer App**&trade;. Could static site
 technology be useful as the basis for a possible killer app? On the face of it,
@@ -124,13 +123,13 @@ developing JAMstack prototypes of future apps. More on that in future posts.
 
 ## Choosing a Hosting Provider
 
-Like all web sites, a static or JAMstack, site must be be hosted
+Like all web sites, a static or JAMstack site must be be hosted
 somewhere if you want others to be able to access it. As with the site generators
 themselves, there are many options for hosting static sites. I'll highlight a few that I've used or investigated:
 
-* [Dreamhost](https://www.dreamhost.com/) has been my hosting service and domain registrar for many years. I've always been happy with their service and could easily host my site there. But, it's just old to me and I want to try someting new.
-* [GitHub Pages](https://pages.github.com/) would probably be the smart choice at this point in time. It's well supported by Hugo, free, and tightly bound to the source repo for the site. But, the new hotness beckons&hellip;
-* [Netlify](https://www.netlify.com/) is a relatively new service dedicated to hosting static sites. In addition to static sites, they recently announced support for the 'JA' portion of JAMstack by providing native support for AWS Lambda functions, user authentication, and form handling (and lots of other [cool stuff](https://www.netlify.com/features/)). This fits well with the type of killer app I have in mind and I think a little extra up front learning will pay off in the future. Besides, it's **hot**!
+* [Dreamhost](https://www.dreamhost.com/) has been my hosting service and domain registrar for many years. I've always been happy with their service and could easily host my site there, but it's just old to me and I want to try something new.
+* [GitHub Pages](https://pages.github.com/) would probably be the smart choice at this point in time. It's well-supported by Hugo, free, and tightly bound to the source repo for the site. But, the new hotness beckons&hellip;
+* [Netlify](https://www.netlify.com/) is a relatively new service dedicated to hosting static sites. In addition to static sites, they recently announced support for the 'JA' portion of JAMstack by providing native support for AWS lambda functions, user authentication, and form handling (and lots of other [cool stuff](https://www.netlify.com/features/)). This fits well with the type of killer app I have in mind, and I think a little extra up front learning will pay off in the future. Besides, it's **hot**!
 
 ## TODO
 
@@ -148,14 +147,14 @@ Hugo](https://themes.gohugo.io/beautifulhugo/) theme to style my blog. I don't
 know about beautiful, but I think it looks pretty good (or maybe just OK). At
 some point I may want to "brand" my site to distinguish it with its own look. This
 would need to coincide with the development of my own Hugo theme. That looks
-like a major task and I probably won't tackle it for quite some time. It's just
+like a major task, so I probably won't tackle it for quite some time. It's just
 not on the fast path to **The Killer App**&trade;.
-* **Comments**:  I certainly would like to hear
-what people have to say about my content, but I'm not sure traditional blog
+* **Comments**:  I would certainly like to hear
+what people have to say about my content, but I'm not sure whether traditional blog
 comments are the best venue. Hugo does support comment systems such as
 [Disqus](https://disqus.com/) and [Staticman](https://staticman.net/) but I
 don't like how they look out of the box. Plus, there's the management
-overhead. They attract a lot of junk and probably need to be moderated or the
+overhead. They attract a lot of junk and probably need to be moderated; otherwise, the
 useless content will remain tied to your blog for all time. For now, I think
 Twitter might be the best place for comments on my posts. Even if it gets ugly,
 the comments are not attached to the blog.
