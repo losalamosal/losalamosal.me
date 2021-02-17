@@ -5,13 +5,12 @@ To clone and build this site:
 
 ```sh
 # clone as follows with SSH for multiple GitHub accounts
-> git clone git@losalamosal.github.com/losalamosal/losalamosal.me.git
+> git clone --recursive git@losalamosal.github.com/losalamosal/losalamosal.me.git
 > cd losalamosal.me
-# Set email for SSH user
-> git config user.email account-appropriate@email
-> cd themes
-> git submodule init
-> git submodule update
+> git config user.email ...
+> git config user.name ...
+> git submodule update --remote
+# commit this update to repo
 # add a post--contraty to Hugo docs, must be post directory for this theme
 > hugo new post/starting-to-blog.md
 # Check the site at localhost:1313
