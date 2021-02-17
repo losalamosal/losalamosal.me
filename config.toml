@@ -1,10 +1,13 @@
-baseURL = "/"
-languageCode = "en-us"
+baseURL = "https://losalamosal.me"
+DefaultContentLanguage = "en"
 title = "Los Alamos Al"
 theme = "beautifulhugo"
 buildDrafts = true
 googleAnalytics = "UA-120820279-1"
 metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
 # pygmentsStyle = "manni"
 pygmentsStyle = "murphy"
 # pygmentsStyle = "pastie"
@@ -14,15 +17,14 @@ pygmentsStyle = "murphy"
 # pygmentsStyle = "emacs"
 # pygmentsStyle = "friendly"
 # pygmentsStyle = "native"
-pygmentsUseClasses = false
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
+# pygmentsUseClasses = false
 
 [Params]
   subtitle = "Semi-retired computer scientist. Prepping for the killer app."
   logo = "img/slim1.jpg"
   dateFormat = "January 2, 2006"
   readingTime = false
+  mainSections = ["post","posts"]
 
 [Author]
   name = "Allen McPherson"
